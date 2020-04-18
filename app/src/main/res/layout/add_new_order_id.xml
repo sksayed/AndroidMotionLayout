@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addNewOrderIdLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/white_background_24r"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/addNewOrderIdTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Add New Order ID"
+            android:textAppearance="@style/Header_Text"
+            app:layout_constraintBottom_toTopOf="@id/productIdLayout"
+            app:layout_constraintStart_toStartOf="@id/productIdLayout" />
+
+        <RelativeLayout
+            android:id="@+id/productIdLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent=".35"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".92">
+
+            <EditText
+                android:id="@+id/productIdEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/product_id_edittext_background"
+                android:cursorVisible="true"
+                android:hint="Product Number"
+                android:paddingHorizontal="32dp"
+                android:textColorHint="@color/Drak_Gray"
+                android:textCursorDrawable="@color/Drak_Gray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <ImageButton
+                android:id="@+id/productIdButton"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@id/productIdEditText"
+                android:layout_alignRight="@id/productIdEditText"
+                android:layout_alignBottom="@id/productIdEditText"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/product_id_button_body"
+                android:src="@drawable/ic_button_arrow_right" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

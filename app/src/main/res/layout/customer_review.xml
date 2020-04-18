@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:id="@+id/emoticReviewImageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/reviewEmoticImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/onclick_background"
+            android:clickable="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_review_emo_1" />
+
+        <ImageView
+            android:id="@+id/reviewEmoticImageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/onclick_background"
+            android:clickable="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_review_emo_2" />
+
+        <ImageView
+            android:id="@+id/reviewEmoticImageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/onclick_background"
+            android:clickable="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_review_emo_3" />
+
+        <ImageView
+            android:id="@+id/reviewEmoticImageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/onclick_background"
+            android:clickable="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_review_emo_4" />
+
+        <ImageView
+            android:id="@+id/reviewEmoticImageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/onclick_background"
+            android:clickable="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_review_emo_5" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/reviewBoxEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/Light_Gray"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="0dp"
+        app:layout_constraintHeight_percent=".2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emoticReviewImageLayout"
+        app:layout_constraintWidth_percent=".9">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:gravity="start"
+            android:hint="Say Something..."
+            android:padding="12dp"
+            android:textAppearance="@style/Say_Something_Text"
+            android:textColorHint="@color/Drak_Gray"
+            android:textCursorDrawable="@color/Drak_Gray" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/doneButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="@color/colorYellow"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="@id/reviewBoxEditText"
+        app:layout_constraintHeight_percent=".08"
+        app:layout_constraintStart_toStartOf="@id/reviewBoxEditText"
+        app:layout_constraintTop_toBottomOf="@id/reviewBoxEditText">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="4dp"
+            android:text="done"
+            android:textAllCaps="true"
+            android:textAppearance="@style/QuickBold_Text" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/deliverySuccessTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:gravity="center"
+        android:text="@string/delivery_success_text"
+        android:textAppearance="@style/Delivery_success_Text"
+        app:layout_constraintBottom_toTopOf="@id/emoticReviewImageLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profileSubInfoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        app:layout_constraintBottom_toTopOf="@id/deliverySuccessTextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/profileNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:text="Alex"
+            android:textAppearance="@style/Rubik_16_Black"
+            app:layout_constraintLeft_toLeftOf="@id/profileSubInfoLayout" />
+
+        <ImageView
+            android:id="@+id/starImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_star"
+            app:layout_constraintBottom_toBottomOf="@id/ratingTextView"
+            app:layout_constraintLeft_toRightOf="@id/profileNameTextView"
+            app:layout_constraintRight_toLeftOf="@id/ratingTextView"
+            app:layout_constraintTop_toTopOf="@id/ratingTextView" />
+
+        <TextView
+            android:id="@+id/ratingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:maxLines="1"
+            android:text="4.5"
+            android:textAppearance="@style/Rubik_16_Black"
+            app:layout_constraintRight_toRightOf="@id/profileSubInfoLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/profilePictureImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/alex_profile_picture_100"
+        app:layout_constraintBottom_toTopOf="@id/profileSubInfoLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

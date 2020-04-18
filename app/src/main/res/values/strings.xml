@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DelimanTrackOrder</string>
+    <string name="term_first">By Continueing, you agree to</string>
+    <string name="term_second_yellow">DeliMan’s Terms and Conditions</string>
+    <string name="term_third">acknowledge you have read the</string>
+    <string name="term_fourth_yellow">Privecy Policy</string>
+    <string name="not_match_text">Does Not match Your Product ID.\nPlease Try Again !</string>
+    <string name="resistation_text">Registration as merchant/Agent</string>
+    <string name="delivery_success_text">Your Delivery\nSuccessfully Done</string>
+
+</resources>

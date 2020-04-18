@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/termLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/bottomTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="16dp"
+            android:maxLines="1"
+            android:text="@string/term_third"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Bottom_term_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/bottomTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:clickable="true"
+            android:maxLines="1"
+            android:text="@string/term_fourth_yellow"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Bottom_term_Yellow"
+            app:layout_constraintBottom_toBottomOf="@id/bottomTextView"
+            app:layout_constraintLeft_toRightOf="@id/bottomTextView"
+            app:layout_constraintTop_toTopOf="@id/bottomTextView" />
+
+        <TextView
+            android:id="@+id/bottomTextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:maxLines="1"
+            android:text="@string/term_first"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Bottom_term_white"
+            app:layout_constraintBottom_toTopOf="@id/bottomTextView"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/bottomTextView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:clickable="true"
+            android:maxLines="1"
+            android:text="@string/term_third"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Bottom_term_Yellow"
+            app:layout_constraintBottom_toBottomOf="@id/bottomTextView3"
+            app:layout_constraintLeft_toRightOf="@id/bottomTextView3"
+            app:layout_constraintTop_toTopOf="@id/bottomTextView3" />
+
+        <TextView
+            android:id="@+id/bottomTextView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:maxLines="1"
+            android:text="and"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Bottom_term_white"
+            app:layout_constraintBottom_toBottomOf="@id/bottomTextView3"
+            app:layout_constraintLeft_toRightOf="@id/bottomTextView4"
+            app:layout_constraintTop_toTopOf="@id/bottomTextView3" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainContentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/track_order_content_layout_body"
+        app:layout_constraintBottom_toTopOf="@id/termLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/delimanLogoImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:src="@drawable/ic_deliman_order_track"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/productIdLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintHeight_percent=".08"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/delimanLogoImageView"
+            app:layout_constraintWidth_percent=".92">
+
+            <EditText
+                android:id="@+id/productIdEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/product_id_edittext_background"
+                android:cursorVisible="true"
+                android:hint="Product ID"
+                android:textColorHint="@color/Drak_Gray"
+                android:paddingHorizontal="32dp"
+                android:textCursorDrawable="@color/Drak_Gray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <ImageButton
+                android:id="@+id/productIdButton"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@id/productIdEditText"
+                android:layout_alignRight="@id/productIdEditText"
+                android:layout_alignBottom="@id/productIdEditText"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/product_id_button_body"
+                android:src="@drawable/ic_button_arrow_right" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/notMatchLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/not_match_layout_backdround"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@id/productIdLayout"
+            app:layout_constraintStart_toStartOf="@id/productIdLayout"
+            app:layout_constraintTop_toBottomOf="@id/productIdLayout">
+
+            <ImageView
+                android:id="@+id/notMatchEmoImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_not_match_emo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_toRightOf="@id/notMatchEmoImageView"
+                android:text="@string/not_match_text"
+                android:textAppearance="@style/Not_match_Text" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/orTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="Or"
+            android:textAllCaps="true"
+            android:textAppearance="@style/QuickBold_Text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/notMatchLayout" />
+
+        <TextView
+            android:id="@+id/resistationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:clickable="true"
+            android:text="@string/resistation_text"
+            android:textAllCaps="true"
+            android:textAppearance="@style/QuickBold_Text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/orTextView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
