@@ -9,6 +9,6 @@ public class RunClass extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.rider_info_after);
+        setContentView(R.layout.rider_info_main);
     }
 }
