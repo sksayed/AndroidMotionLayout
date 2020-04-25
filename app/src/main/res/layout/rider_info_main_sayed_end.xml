@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    app:layoutDescription="@xml/rider_info_scene_sayed"
+    app:layoutDescription="@xml/rider_info_scene"
     tools:showPaths="true"
     android:background="@android:color/transparent">
 
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="156dp" />
+            app:layout_constraintGuide_begin="56dp" />
 
         <RelativeLayout
             android:id="@+id/profileInfoLayout"
